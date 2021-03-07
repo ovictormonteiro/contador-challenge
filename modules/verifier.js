@@ -7,12 +7,11 @@ export default function Verifier() {
     let novaData = '';   
     const isDate = new RegExp('[0-9][0-9]\/[0-9][0-9]\/[0-9][0-9][0-9][0-9]');
     const dataInput = document.querySelector('input[type="text"]');
-    const resultado = isDate.test(dataInput.value);  
+    const resultado = isDate.test(dataInput.value);
     if(resultado){
       const [dia, mes, ano] = dataInput.value.split('/');
       const data = `${ano}-${mes}-${dia}`;
-      novaData = new countDown(data + " GMT-0300");
-      console.log(novaData); 
+      novaData = new countDown(data + " GMT-0300");      
       if (novaData._timeStampDiff){
         const h1Dia = document.querySelector('#contadorLayout main>h1:last-child');
         h1Dia.innerText = `Para o dia ${dataInput.value}`;
