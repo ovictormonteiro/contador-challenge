@@ -5,8 +5,60 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contador Challenge</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+  <link rel="preload" as="style" href="./style.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  
+  <!-- ==== Área do Input ====  -->
+  <div id="main-layout" class="inativo">
+    <main>
+      <h1>Contador</h1>
+      <h2>Informe uma data</h2>
+      <form>
+        <input type="text" name="input-date" id="date" data-aria="input-date" placeholder="DD/MM/YYYY"><br/>
+        <button type="submit" id="submit">Iniciar Contagem</button>
+      </form>
+    </main>
+  </div>
+  <!-- ==== Fim da área do input ====  -->
+
+  <!-- ===== Área do Contador =====  -->
+  <div id="contadorLayout">
+    <header>
+      <div class="contadorTitulo">
+        <h1>Contador</h1>
+      </div>
+      <div class="contadorButton">
+        <button class="restart">
+          Reiniciar
+        </button>
+      </div>
+    </header>
+    <main>
+      <h1>Faltam</h1>
+      <div class="contador">
+        <div class="contadorNumberContainer">
+          <div class="contadorNumber days">00</div>
+          <p>Dias</p>
+        </div>   
+        <div class="contadorNumberContainer">
+          <div class="contadorNumber hours">00</div>
+          <p>Horas</p>
+        </div> 
+        <div class="contadorNumberContainer">
+          <div class="contadorNumber minutes">00</div>
+          <p>Minutos</p>
+        </div> 
+        <div class="contadorNumberContainer">
+          <div class="contadorNumber seconds">00</div>
+          <p>Segundos</p>
+        </div>      
+      </div>
+      <h1>Para o dia x</h1>
+    </main>
+  </div>
+  <!-- ==== Fim da Área do Contador ====  -->
 </body>
 </html>
