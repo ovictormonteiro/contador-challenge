@@ -15,8 +15,9 @@ export default class countDown{
     const result = this._futureDate.getTime() - this._actualDate.getTime();
     if(result < 0 ){
       return alert('Coloque uma data maior do que a presente');
-    }
-    return result;
+    } else {
+      return result;
+    }    
   }
 
   get days(){
