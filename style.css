@@ -39,6 +39,10 @@ body{
 
 #main-layout.inativo{
   display: none;
+}
+
+#main-layout.ativo{
+  display: flex;
   flex-direction: column;
   align-items:center;
   justify-content:center;
@@ -46,10 +50,6 @@ body{
   width: 100%;
   height: 50rem;  
   margin: 0 auto;
-}
-
-#main-layout.ativo{
-  display: flex;
 }
 
 main{
@@ -93,7 +93,11 @@ form>button{
 
 /* ==== Área do Contador ====  */
 
-#contadorLayout{
+#contadorLayout.inativo{
+  display: none;
+}
+
+#contadorLayout.ativo{
   display: flex;
   width: 100%;
   height: 100vh;
@@ -101,7 +105,7 @@ form>button{
 }
 
 
-#contadorLayout header{
+#contadorLayout.ativo header{
   height: 150px;
   width: 100%;
   display: flex;
@@ -109,11 +113,11 @@ form>button{
   padding: 16px 16px;
 }
 
-#contadorLayout header button, #contadorLayout header .restart{
+#contadorLayout.ativo header button, #contadorLayout header .restart{
   flex: 1;
 }
 
-#contadorLayout header button{
+#contadorLayout.ativo header button{
   width: 200px;
   height: 50px;
   border-radius: 25px;
@@ -124,12 +128,12 @@ form>button{
   cursor: pointer;
 }
 
-#contadorLayout main{
+#contadorLayout.ativo main{
   width: 100%;
   height: 40rem;  
 }
 
-#contadorLayout main>h1{
+#contadorLayout.ativo main>h1{
   color: var(--cinza) !important;
   margin-top: 3.2rem;
 }
