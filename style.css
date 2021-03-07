@@ -37,12 +37,35 @@ body{
 
 /* ====Área do Input ==== */
 
+@keyframes Inativo{
+  from{
+    opacity: 1;
+  }
+  
+  to{
+    opacity: 0;
+  }
+}
+
 #main-layout.inativo{
   display: none;
+  animation: Inativo 0.5s ease-out forwards;
+}
+
+
+@keyframes Ativo{
+  from{
+    opacity: 0;
+    display: none;
+  }
+  to{
+    opacity: 1;
+    display: flex !important;
+  }
 }
 
 #main-layout.ativo{
-  display: flex;
+  display: flex;  
   flex-direction: column;
   align-items:center;
   justify-content:center;
@@ -50,6 +73,7 @@ body{
   width: 100%;
   height: 50rem;  
   margin: 0 auto;
+  animation: Ativo .4s ease-in forwards;
 }
 
 main{
@@ -95,6 +119,7 @@ form>button{
 
 #contadorLayout.inativo{
   display: none;
+  animation: Inativo .5s ease-out forwards;
 }
 
 #contadorLayout.ativo{
@@ -102,6 +127,7 @@ form>button{
   width: 100%;
   height: 100vh;
   flex-direction: column;
+  animation: Ativo .5s ease-in forwards;
 }
 
 
@@ -168,3 +194,14 @@ form>button{
 }
 
 /* ==== Fim da Área do Contador ====  */
+
+/* ==== Área Info Class ==== */
+
+.areaInfoClass{
+  display: block;
+  width: 100%;
+  height: auto;
+  font-size: 2.4rem;
+  color: #fff;
+  transition:.4s ease-in-out;
+}
